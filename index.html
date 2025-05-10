@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="first-page">
+        
+        <div class="text-cover-div" background="blue">
+            <img id="cover-text-img" src="asset/TextCover2.png" alt="Bride and Groom">
+        </div>
+
+        <div class="guest-div">
+            <p class="cream">Dear Mr./Mrs./Ms.</p>
+            <p class="guest-name cream" id="guest-name">Guest,</p>
+
+        </div>
+        <div class="rsvp">
+            <button id="open-invitation">Open Invitation</button>
+        </div>
+        <div class="background"></div>
+
+
+    </div>
+
+    <div id="second-page" style="display: none;">
+        <!-- Left Block (Visible on PC only) -->
+        <div class="left-block">
+
+        </div>
+
+        <!-- Right Block (Visible on both PC and Mobile) -->
+        <div class="right-block">
+            <!-- Page 1 : Photo Gallery-->
+            <div class="page" id="page1">
+                <!-- Slideshow Container -->
+                <div class="slideshow">
+                    <img src="asset/pic1.webp" alt="Photo 1" class="slide active">
+                    <img src="asset/pic2.webp" alt="Photo 2" class="slide">
+                    <img src="asset/pic3.webp" alt="Photo 3" class="slide">
+                </div>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="page" id="page2">
+                <div id="bride-groom-wrapper">
+                    <div id="div-bride-text">
+                        <p class="apple" id="bride-text">Bride & Groom</p>
+                    </div>
+                    <div id="divgroom">
+                        <img src="asset/groom.png" class="picgroombride">
+                    </div>
+                    <div id="divgroom-text">
+                        <img src="asset/Willy.png" class="picgroombride">
+                    </div>
+                    <div id="divbride">
+                        <img src="asset/bride.png" class="picgroombride">
+                    </div>
+                    <div id="divgroom-text">
+                        <img src="asset/Angel.png" class="picgroombride">
+                    </div>
+                </div>
+        
+            </div>
+
+            <!-- Page 3 -->
+            <div class="page" id="page3">
+                <div id="event">
+                    <img src="asset/holy.jpeg" class="picevent">
+                </div>
+            </div>
+
+            <!-- Page 3b -->
+            <div class="page" id="page3">
+                <div id="event">
+                    <img src="asset/reception.jpeg" class="picevent">
+                </div>
+            </div>
+
+            <!-- Page 4 -->
+            <div class="page" id="page4">
+                <!-- Slideshow Container -->
+                <div class="slideshow-container">
+                    <img src="asset/OurMoments.webp" alt="Photo 1" class="slidingPic active">
+                    <img src="asset/OurMoments2.webp" alt="Photo 2" class="slidingPic">
+
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="page" id="page5">
+                <div id="countdown-wrapper">
+                    <p class="black apple text-generic">Counting Down to Our Big Day</p>
+                    <div id="countdown">
+                        <div>
+                            <span id="days"></span>
+                            <span>Days</span>
+                        </div>
+                        <div>
+                            <span id="hours"></span>
+                            <span>Hours</span>
+                        </div>
+                        <div>
+                            <span id="minutes"></span>
+                            <span>Minutes</span>
+                        </div>
+                        <div>
+                            <span id="seconds"></span>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-form-container">
+                    <!-- Invisible iframe to catch the Google Form redirect -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                    <form id="custom-rsvp-form" class="custom-form"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSeNJboMopgdqjA8ZAPf4zrYl99Sl_hCBPGQRZ2Qhv999fx5Sg/formResponse"
+                        method="POST" target="hidden_iframe" onsubmit="submitted=true">
+                        <h2>RSVP for Our Event</h2>
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="entry.1498135098" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Will you attend?</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="entry.877086558" value="Holy Matrimony" required> Holy
+                                    Matrimony
+                                </label>
+                                <label>
+                                    <input type="radio" name="entry.877086558" value="Reception" required> Reception
+                                </label>
+                                <label>
+                                    <input type="radio" name="entry.877086558" value="Holy Matrimony and Reception"
+                                        required> Holy Matrimony and Reception
+                                </label>
+                                <label>
+                                    <input type="radio" name="entry.877086558" value="Sorry, I can't join"> Sorry, I
+                                    can't join
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Wishes</label>
+                            <input type="text" id="wish" name="entry.2606285" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit RSVP</button>
+                    </form>
+                    <div id="thank-you" style="display:none;">🎉 Thank you for your RSVP!</div>
+                </div>
+            </div>
+
+            <!-- Page 6 -->
+            <div class="page" id="page6">
+                <div id="response-div">
+                    <h2 class="apple text-generic">Wishes from our dearest</h2>
+                    <div id="wishes-container">
+                        <ul id="wishes-list"></ul>
+                    </div>
+                </div>
+
+                <div id="gift-div">
+                    <h2 class="apple text-generic">Warm Gift</h2>
+                    <div id="gift-container">
+                        <p>Your presence at our wedding is the most meaningful gift.</p>
+                        <p>Should you wish to bless us further, we have provided our bank account details below.</p>
+                        <div id="gift-container-horizontal">
+                            <div id="mandiri" class="gift-card">
+                                <div class="gift-card-item">
+                                    <img src="asset/mandiri.png" class="bank">
+                                </div>
+                                <div class="gift-card-item">
+                                    1650001778712
+                                </div>
+                                <div class="gift-card-item">
+                                    a/n Willy Wijaya
+                                </div>
+                            </div>
+                            <div id="bca" class="gift-card">
+                                <div class="gift-card-item">
+                                    <img src="asset/bca.png" class="bank">
+                                </div>
+                                <div>
+                                    8230421669
+                                </div>
+                                <div>
+                                    a/n Angelis Jessica
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="asset/blue.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

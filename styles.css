@@ -1,0 +1,767 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f8f4f0;
+    text-align: center;
+}
+
+.apple {
+    font-family: 'Apple Chancery'
+}
+
+/* Background Image */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('asset/cover.webp') no-repeat center center/cover;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+#first-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.text-cover-div {
+    position: relative;
+    /* Allows absolute positioning of child elements */
+    text-align: center;
+    z-index: 0;
+    /* Places the container above the background */
+    top:20%;
+    margin-bottom: 20px;
+    height: 30%;
+}
+
+#cover-text-img {
+    max-width: 60%;
+    /* Ensures the image doesn't overflow on small screens */
+    height: auto;
+    /* Maintains aspect ratio */
+}
+
+.guest-div {
+    position: relative;
+    top: 20%;
+    /* Adds space between the image and text */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    /* Ensures content is above the images */
+}
+
+.guest-div p {
+    margin: 5px 0;
+}
+
+.guest-div .guest-name {
+    font-size: 2.0rem;
+    /* Ensures specificity */
+}
+
+.guest-name {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: #FAF3E0;
+    padding: 10px 20px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.couple-names {
+    font-size: 12rem;
+    font-family: 'Beautica';
+    margin: 10px 0;
+}
+
+.couple-and {
+    font-size: 8rem;
+    font-family: 'Beautica';
+    margin: 0px 0;
+}
+
+.rsvp {
+    position: relative;
+    top : 25%;
+    z-index: 1;
+}
+
+.cream {
+    color: #FAF3E0;
+    /* Gold color in hex */
+}
+
+.black {
+    color: #000;
+}
+
+#open-invitation {
+    padding: 12px 24px;
+    background: #ffffff;
+    border: 2px solid #4caf50;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+  }
+
+#open-invitation:hover {
+  background: linear-gradient(135deg, #e1f5f8, #f8e1f4);
+  color: #222;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Second Page Styles */
+#second-page {
+    display: none;
+    height: 100vh;
+    /* background-color: #f9f9f9; */
+    color: #333;
+}
+
+/* Left Block (Visible on PC only) */
+.left-block {
+    padding: 20px;
+    text-align: center;
+    background: url('asset/cover.webp') no-repeat center center/cover;
+}
+
+
+/* Right Block */
+.right-block {
+    overflow-y: auto;
+    /* Make it scrollable */
+    width: 100%;
+}
+
+/* Page Styling */
+.page {
+    background: linear-gradient(135deg, #FAF3E0 0%, #F0E5D8 50%, #E8D9C1 100%);
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Ensure the page takes full height */
+}
+
+.page h2 {
+    margin-top: 0;
+}
+
+
+/* Slideshow Container */
+.slideshow {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    /* Full width of the page */
+    height: 100%;
+    /* Full height of the page */
+    overflow: hidden;
+}
+
+/* Slides */
+.slide {
+    background-color: #000000;
+    box-sizing: border-box;
+    top: 0;
+    /* Align to the top of the container */
+    left: 0;
+    /* Align to the left of the container */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the container */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.slide.active {
+    opacity: 1;
+}
+
+
+/* Page 2 */
+
+#div-bride-text {
+    margin: 0px;
+    padding: 0px;
+}
+
+#bride-text {
+    font-size: 3rem;
+    color:#5C4033;
+}
+
+#bride-groom-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#div-bride-text {
+    height: 12%;
+}
+
+#divgroom{
+    margin: 0px;
+    width: 100%;
+    height: 28%;
+}
+
+#divgroom-text{
+    margin: 0px;
+    width: 100%;
+    height: 12%;
+}
+
+
+#divbride{
+    margin: 0px;
+    width: 100%;
+    height: 30%;
+}
+
+.picgroombride {
+    margin: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Page 3 */
+
+#page3 {
+    height: 68vh;
+}
+
+#event-wrapper {
+    display: flex;
+    height: 70vh;
+}
+
+#event {
+    width: 100%;
+    height: 100%;
+}
+
+.picevent {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Page 4 */
+#page4 {
+    height: 68vh;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slidingPic {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out;
+}
+
+.slidingPic.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -20px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    user-select: none;
+    transition: 0.3s;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+/* Page 5*/
+
+/* Countdown Container */
+
+.wrapper {
+    background-color: rgba(1, 1, 1, 0.7);
+    /* White with 70% opacity */
+}
+
+#page5 {
+    background-color: #000;
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+    align-items: center;      /* centers vertically */
+    height: 100vh;            /* or any fixed height */
+    padding: 0px;
+}
+
+#countdown-wrapper {
+    padding-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Space between countdown units */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#countdown div {
+    display: flex;
+    width: 15%;
+    background-color: #4A4A4A;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 5px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#countdown span:first-child {
+    font-size: 2rem;
+    /* Larger font for numbers */
+}
+
+#countdown span {
+    font-size: 1rem;
+}
+
+.custom-form-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10%;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-form h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 10%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group input[type="text"],
+.form-group input[type="wish"] {
+    width: 90%;
+    padding: 5%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.radio-group {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 2%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-group label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 5%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+    background: #2ecc71;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+/* Page 6*/
+
+#page6 {
+    display: flex;
+    align-items: center;      /* centers vertically */
+    height: 120vh;            /* or any fixed height */
+}
+#page6 p {
+    margin-bottom: 1rem; /* Adds nice breathing room */
+    line-height: 1.0; /* Makes it easier to read */
+    font-size: small;
+}
+
+#response-div {
+    margin-top: 10%;
+    padding: 0rem 3rem;
+}
+
+#wishes-container {
+    padding: 0px 30px;
+    max-width: 600px;
+    background: #D8D5C0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-height: 325px;
+    overflow-y: auto;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#wishes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem 2%;
+    padding: 0;
+    list-style: none;
+}
+
+.wish-card {
+    background: #fff5f8;
+    padding: 1rem 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.wish-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: #000;
+}
+
+.wish-message {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    white-space: pre-wrap;
+    /* keeps line breaks */
+    max-height: 120px;
+    /* 🎯 fixed height */
+    overflow-y: auto;
+}
+
+#gift-div {
+    margin-top: 10%;
+}
+
+#gift-container {
+    background-color: #D8D5C0;
+    max-width: 300px;
+    border-radius: 6px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+}
+
+#gift-container-horizontal {
+    max-width: 300px;
+    max-height: 450px;
+
+    width: auto;
+    display: flex;
+
+    padding: 1rem;
+}
+
+.gift-card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.bank {
+    width: 90px;
+    height: 90px;
+}
+
+/* PC Layout (Screen width >= 768px) */
+@media (min-width: 768px) {
+    .text-cover-div{
+        top:10% 
+    }
+
+    .guest-div {
+        top:30% 
+    }
+
+    .guest-div .guest-name {
+        font-size: 3.0rem;
+    }
+
+    .rsvp {
+        top: 35%;
+    }
+
+    #second-page {
+        display: flex;
+        width: 100%;
+        /* Flexbox for side-by-side layout */
+    }
+    
+    .left-block {
+        width: 60%;
+    }
+
+    .right-block {
+        width: 40%;
+    }
+
+    #div-bride-text {
+        height: 15%;
+    }
+
+    #divgroom{
+        height: 30%;
+    }
+    
+    #divgroom-text{
+        height: 10%;
+    }
+    
+    
+    #divbride{
+        height: 32%;
+    }
+
+
+    #page3 {
+        height: 100vh;
+    }
+    
+    #page4 {
+        height: 100vh;
+    }
+
+    #countdown-wrapper {
+        padding-bottom: 50px;
+    }
+    
+    #countdown {
+        gap: 30px;
+        font-size: 3rem;
+    }
+    
+    #countdown div {
+        width: 25%;
+        padding: 40px;
+        padding: 10px 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    #countdown span:first-child {
+        font-size: 3rem;
+        /* Larger font for numbers */
+    }
+    
+    #countdown span {
+        font-size: 1.5rem;
+    }
+
+    .custom-form-container {
+        max-width: 1000px;
+        padding: 80px;
+    }
+    
+    
+    #wishes-container {
+        max-height: 450px;
+    }
+
+    #gift-container {
+        max-width: 450px;
+        margin: 3rem;
+    }
+
+    #gift-container-horizontal {
+        padding: 1rem 5rem;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .gift-card {
+        margin: 1rem;
+    }
+
+    .bank{
+        width: 120px;
+        height: 120px;  
+    }
+
+    .text-generic {
+        font-size: 2rem;
+    }
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #open-invitation {
+        font-size: 12px;
+    }
+
+    #second-page {
+        display: block;
+        /* Stack blocks vertically */
+    }
+
+    .left-block {
+        display: none;
+        /* Hide left block on mobile */
+    }
+
+    .right-block {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+
+    .couple-names {
+        font-size: 4rem;
+    }
+
+    #cover-text-img {
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .guest-name {
+        font-size: 1rem;
+    }
+
+    #bride-text {
+        font-size: 1.2rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+
+    .rsvp a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    #text-cover {
+        width: 100%
+    }
+
+}
+
+@font-face {
+    font-family: 'RoyalWedding';
+    src: url('fonts/RoyalWedding-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Beautica';
+    src: url('fonts/Beautica.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Apple Chancery';
+    src: url('../fonts/Apple\ Chancery.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
