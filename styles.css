@@ -348,7 +348,7 @@ footer {
     background-color: #000;
     display: flex;
     align-items: center;      /* centers vertically */
-    height: 120vh;            /* or any fixed height */
+    height: 100vh;            /* or any fixed height */
     padding: 0px;
 }
 
@@ -365,7 +365,7 @@ footer {
     width: auto;
     display: flex;
     justify-content: center;
-    gap: 1%;
+    gap: 2%;
     /* Space between countdown units */
     font-size: 1.5rem;
     font-weight: bold;
@@ -398,17 +398,28 @@ footer {
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 60%;
-    margin-top: 6%;
-    padding: 13% 15% 2% 15%;
+    height: auto;
+    margin-top: 5%;
+    padding: 13% 15% 13% 15%;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
 }
 
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .custom-form h2 {
     text-align: center;
+    
 }
 
 .form-group {
@@ -645,16 +656,16 @@ footer {
     }
     
     #countdown span:first-child {
-        font-size: 2rem;
+        font-size: 1.8rem;
         /* Larger font for numbers */
     }
     
     #countdown span {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .custom-form-container {
-        height: 50%;
+        height: 60%;
         max-width: auto;
         padding: 6% 6% 1% 6%;
     }
