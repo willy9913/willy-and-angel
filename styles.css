@@ -347,17 +347,22 @@ footer {
 #page5 {
     background-color: #000;
     display: flex;
-    justify-content: center;  /* centers horizontally */
     align-items: center;      /* centers vertically */
     height: 100vh;            /* or any fixed height */
     padding: 0px;
 }
 
 #countdown-wrapper {
-    padding-bottom: 20px;
+    height: 20%;
+    width: 75%;
+    vertical-align: middle;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 #countdown {
+    height: 60%;
+    width: auto;
     display: flex;
     justify-content: center;
     gap: 1%;
@@ -369,18 +374,19 @@ footer {
 
 #countdown div {
     display: flex;
-    width: 15%;
+    width: 20%;
     background-color: #4A4A4A;
     padding: 3%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #fff;
-    padding: 1vh 2vh;
+    padding: 1vh 1vh;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #countdown span:first-child {
-    font-size: 2rem;
+    font-size: 1.7rem;
     /* Larger font for numbers */
 }
 
@@ -389,9 +395,12 @@ footer {
 }
 
 .custom-form-container {
-    max-width: 80%;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 60%;
     margin: 0 auto;
-    padding: 10%;
+    padding: 15% 15% 5% 15%;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -399,9 +408,7 @@ footer {
 }
 
 .custom-form h2 {
-    color: #2c3e50;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .form-group {
@@ -624,23 +631,23 @@ footer {
     }
 
     #countdown-wrapper {
-        padding-bottom: 50px;
+        padding-bottom: 10%;
     }
     
     #countdown {
-        gap: 30px;
-        font-size: 3rem;
+        gap: 2%;
+        font-size: 2rem;
     }
     
     #countdown div {
-        width: 25%;
-        padding: 40px;
-        padding: 10px 20px;
+        width: 20%;
+        padding: 3%;
+        padding: 1% 2%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     
     #countdown span:first-child {
-        font-size: 3rem;
+        font-size: 2rem;
         /* Larger font for numbers */
     }
     
@@ -649,8 +656,9 @@ footer {
     }
 
     .custom-form-container {
-        max-width: 1000px;
-        padding: 80px;
+        height: 50%;
+        max-width: auto;
+        padding: 10% 10% 1% 10%;
     }
     
     
