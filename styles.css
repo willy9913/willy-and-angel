@@ -348,7 +348,7 @@ footer {
     background-color: #000;
     display: flex;
     align-items: center;      /* centers vertically */
-    height: 100vh;            /* or any fixed height */
+    height: 120vh;            /* or any fixed height */
     padding: 0px;
 }
 
@@ -656,7 +656,7 @@ footer {
     .custom-form-container {
         height: 50%;
         max-width: auto;
-        padding: 10% 10% 1% 10%;
+        padding: 8% 8% 1% 8%;
     }
     
     
