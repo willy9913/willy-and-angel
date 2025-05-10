@@ -28,35 +28,29 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow: hidden;
 }
 
 .text-cover-div {
-    position: relative;
     /* Allows absolute positioning of child elements */
     text-align: center;
     z-index: 0;
     /* Places the container above the background */
-    top:20%;
-    margin-bottom: 20px;
-    height: 30%;
+    margin-top:5%;
+    height: 50%;
 }
 
 #cover-text-img {
-    max-width: 60%;
+    width: auto;
     /* Ensures the image doesn't overflow on small screens */
-    height: auto;
+    height: 100%;
     /* Maintains aspect ratio */
 }
 
 .guest-div {
-    position: relative;
-    top: 20%;
+    margin-top:3%;
     /* Adds space between the image and text */
-    background-color: rgba(0, 0, 0, 0.5);
     /* Semi-transparent overlay */
-    padding: 20px;
     border-radius: 10px;
     z-index: 1;
     /* Ensures content is above the images */
@@ -96,8 +90,7 @@ body {
 }
 
 .rsvp {
-    position: relative;
-    top : 25%;
+    margin-top:3%;
     z-index: 1;
 }
 
@@ -367,7 +360,7 @@ footer {
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 1%;
     /* Space between countdown units */
     font-size: 1.5rem;
     font-weight: bold;
@@ -378,11 +371,11 @@ footer {
     display: flex;
     width: 15%;
     background-color: #4A4A4A;
-    padding: 20px;
+    padding: 3%;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    padding: 5px 10px;
+    padding: 1vh 2vh;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -577,9 +570,6 @@ footer {
 
 /* PC Layout (Screen width >= 768px) */
 @media (min-width: 768px) {
-    .text-cover-div{
-        top:10% 
-    }
 
     .guest-div {
         top:30% 
@@ -700,6 +690,19 @@ footer {
         font-size: 12px;
     }
 
+    .text-cover-div {
+        margin-top:15%;
+        height: 45%;
+    }
+
+    .guest-div {
+        margin-top:10%;
+    }
+
+    .rsvp {
+        margin-top:7%;
+    }
+
     #second-page {
         display: block;
         /* Stack blocks vertically */
@@ -760,7 +763,7 @@ footer {
 
 @font-face {
     font-family: 'Apple Chancery';
-    src: url('../fonts/Apple\ Chancery.ttf') format('ttf');
+    src: url('../fonts/Apple\ Chancery.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
