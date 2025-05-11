@@ -628,18 +628,14 @@ footer {
     align-items: center;
     justify-content: center;
     margin-top: 5%;
-
+    line-height: 1;
     padding: 1rem;
 }
 
 #gift-container-horizontal {
-    max-width: 80%;
     height: auto;
-
-    width: auto;
+    width: 80%;
     display: flex;
-
-    padding: 1rem;
 }
 
 .gift-card {
@@ -649,7 +645,7 @@ footer {
 }
 
 .bank {
-    width: 90px;
+    width: 80%;
     height: 90px;
 }
 
@@ -741,12 +737,8 @@ footer {
         gap: 1rem;
     }
 
-    .gift-card {
-        margin: 1rem;
-    }
-
     .bank{
-        width: 120px;
+        width: 80%;
         height: 120px;  
     }
 
