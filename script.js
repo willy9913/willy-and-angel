@@ -125,3 +125,26 @@ function changeSlide(direction) {
         showSlide2(currentSlidingPic);
     }
 }
+
+
+let currentSlidingNews= 0;
+const slidingNews = document.querySelectorAll('.slidingNews');
+function changeSlideNews(direction) {
+  const newIndex = currentSlidingNews + direction;
+
+  if (newIndex >= 0 && newIndex < slidingNews.length) {
+    currentSlidingNews = newIndex;
+      showSlideNews(currentSlidingNews);
+  }
+}
+
+function showSlideNews(index) {
+  slidingNews.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+  });
+
+  // Disable prev button on first slide
+  prevBtn.classList.toggle('disabled', index === 0);
+  // Disable next button on last slide
+  nextBtn.classList.toggle('disabled', index === slidingNews.length - 1);
+}

@@ -51,13 +51,16 @@
             <div class="page" id="page2">
                 <div id="bride-groom-wrapper">
                     <div id="div-bride-text">
-                        <p class="apple" id="bride-text">Bride & Groom</p>
+                        <img src="asset/groom-banner.png" alt="Photo 1" class="piccover">
                     </div>
                     <div id="divgroom">
                         <img src="asset/groom.png" class="picgroombride">
                     </div>
                     <div id="divgroom-text">
                         <img src="asset/Willy.png" class="picgroombride">
+                    </div>
+                    <div id="div-bride-text">
+                        <img src="asset/bride-banner.png" alt="Photo 1" class="piccover">
                     </div>
                     <div id="divbride">
                         <img src="asset/bride.png" class="picgroombride">
@@ -83,12 +86,28 @@
                 </div>
             </div>
 
+            <!-- Page 3c -->
+            <div class="page" id="page3">
+                <div id="news-title">
+                    <img src="asset/post.png" alt="Photo 1" class="piccover">
+                </div>
+                <!-- Slideshow Container -->
+                <div class="slideshow-container-news">
+                    <img src="asset/news1.png" alt="Photo 1" class="slidingNews active">
+                    <img src="asset/news2.png" alt="Photo 2" class="slidingNews">
+
+                    <a class="prev" onclick="changeSlideNews(-1)">❮</a>
+                    <a class="next" onclick="changeSlideNews(1)">❯</a>
+                </div>
+            </div>
+
             <!-- Page 4 -->
             <div class="page" id="page4">
                 <!-- Slideshow Container -->
                 <div class="slideshow-container">
                     <img src="asset/OurMoments.webp" alt="Photo 1" class="slidingPic active">
                     <img src="asset/OurMoments2.webp" alt="Photo 2" class="slidingPic">
+                    <img src="asset/OurMoments3.webp" alt="Photo 3" class="slidingPic">
 
                     <a class="prev" onclick="changeSlide(-1)">❮</a>
                     <a class="next" onclick="changeSlide(1)">❯</a>
@@ -97,8 +116,10 @@
 
             <!-- Page 5 -->
             <div class="page" id="page5">
+                <div id="countdown-banner-div">
+                    <img src="asset/countdown-banner.png" alt="Photo 1" class="piccover">
+                </div>
                 <div id="countdown-wrapper">
-                    <p class="black apple text-generic">Counting Down to Our Big Day</p>
                     <div id="countdown">
                         <div>
                             <span id="days"></span>
@@ -169,14 +190,18 @@
             <!-- Page 6 -->
             <div class="page" id="page6">
                 <div id="response-div">
-                    <h2 class="apple text-generic">Wishes from our dearest</h2>
+                    <div id="wish-div">
+                        <img src="asset/wish-banner.png" alt="Photo 1" class="piccover">
+                    </div>
                     <div id="wishes-container">
                         <ul id="wishes-list"></ul>
                     </div>
                 </div>
 
                 <div id="gift-div">
-                    <h2 class="apple text-generic">Warm Gift</h2>
+                    <div id="gift-banner-div">
+                        <img src="asset/gift-banner.png" alt="Photo 1" class="piccover">
+                    </div>
                     <div id="gift-container">
                         <p>Your presence at our wedding is the most meaningful gift.</p>
                         <p>Should you wish to bless us further, we have provided our bank account details below.</p>

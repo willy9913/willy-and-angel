@@ -207,13 +207,17 @@ footer {
 
 /* Page 2 */
 
+#page2 {
+    height: auto;
+}
+
 #div-bride-text {
     margin: 0px;
     padding: 0px;
 }
 
 #bride-text {
-    font-size: 2rem;
+    font-size: 3rem;
     color:#5C4033;
 }
 
@@ -221,9 +225,11 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0px;
-    margin: 0px;
+    margin-bottom: 10%;
     padding: 0px;
     overflow: hidden;
+    align-items: center;
+    
 }
 
 #div-bride-text {
@@ -232,20 +238,20 @@ footer {
 
 #divgroom{
     margin: 0px;
-    width: 100%;
+    width: 60%;
     height: 28%;
 }
 
 #divgroom-text{
     margin: 0px;
-    width: 100%;
+    width: 60%;
     height: 12%;
 }
 
 
 #divbride{
     margin: 0px;
-    width: 100%;
+    width: 60%;
     height: 30%;
 }
 
@@ -260,7 +266,7 @@ footer {
 /* Page 3 */
 
 #page3 {
-    height: 68vh;
+    height: auto;
 }
 
 #event-wrapper {
@@ -277,6 +283,47 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* 
+ Page 3c
+*/
+
+#news-title {
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    display: flex;
+}
+
+.piccover {
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow-container-news {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.slidingNews.active {
+    display: block;
+}
+
+.slidingNews {
+    display: none;
+    box-sizing: border-box;
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out;
 }
 
 /* Page 4 */
@@ -348,15 +395,19 @@ footer {
     background-color: #000;
     display: flex;
     align-items: center;      /* centers vertically */
-    height: 100vh;            /* or any fixed height */
+    height: auto;           /* or any fixed height */
     padding: 0px;
+}
+
+#countdown-banner-div {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #countdown-wrapper {
     height: 15%;
     width: 75%;
     vertical-align: middle;
-    margin-bottom: 5%;
     margin-top: 1%;
 }
 
@@ -399,12 +450,12 @@ footer {
     justify-content: center;
     width: auto;
     height: auto;
-    margin-top: 5%;
     padding: 13% 15% 13% 15%;
     background: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
+    margin: 10% 0%;
 }
 
 .custom-form {
@@ -480,13 +531,17 @@ footer {
     margin-top: 20px;
 }
 
+#thank-you {
+  height: 10%;
+}
+
 
 /* Page 6*/
 
 #page6 {
     display: flex;
     align-items: center;      /* centers vertically */
-    height: 120vh;            /* or any fixed height */
+    height: auto;            /* or any fixed height */
 }
 #page6 p {
     margin-bottom: 1rem; /* Adds nice breathing room */
@@ -497,9 +552,14 @@ footer {
 #response-div {
     margin-top: 10%;
     padding: 0rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
 }
 
 #wishes-container {
+    margin-top: 5%;
     padding: 0px 30px;
     max-width: 600px;
     background: #D8D5C0;
@@ -548,26 +608,33 @@ footer {
 }
 
 #gift-div {
+    display: flex;
+    flex-direction: column;
     margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
 }
 
 #gift-container {
     background-color: #D8D5C0;
-    max-width: 300px;
     border-radius: 6px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
 
     padding: 1rem;
 }
 
 #gift-container-horizontal {
-    max-width: 300px;
-    max-height: 450px;
+    max-width: 80%;
+    height: auto;
 
     width: auto;
     display: flex;
@@ -631,18 +698,11 @@ footer {
         height: 32%;
     }
 
-    #page3 {
-        height: 100vh;
-    }
     
     #page4 {
         height: 100vh;
     }
 
-    #countdown-wrapper {
-        padding-bottom: 10%;
-    }
-    
     #countdown {
         gap: 2%;
         font-size: 2rem;
@@ -673,11 +733,6 @@ footer {
     
     #wishes-container {
         max-height: 450px;
-    }
-
-    #gift-container {
-        max-width: 450px;
-        margin: 3rem;
     }
 
     #gift-container-horizontal {
@@ -750,7 +805,7 @@ footer {
     }
 
     #bride-text {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .details p {
