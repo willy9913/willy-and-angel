@@ -146,7 +146,7 @@
 
                     <form id="custom-rsvp-form" class="custom-form"
                         action="https://docs.google.com/forms/d/e/1FAIpQLSeNJboMopgdqjA8ZAPf4zrYl99Sl_hCBPGQRZ2Qhv999fx5Sg/formResponse"
-                        method="POST" target="hidden_iframe" onsubmit="submitted=true">
+                        method="POST" target="hidden_iframe" onsubmit="submitted=true; disableButton()">
                         <h2>RSVP for Our Event</h2>
 
                         <div class="form-group">
@@ -180,7 +180,7 @@
                             <input type="text" id="wish" name="entry.2606285" required>
                         </div>
 
-                        <button type="submit" class="submit-btn">Submit RSVP</button>
+                        <button id="submit-btn" type="submit" class="submit-btn">Submit RSVP</button>
 
                         <div id="thank-you" style="display:none;">🎉 Thank you for your RSVP!</div>
                     </form>

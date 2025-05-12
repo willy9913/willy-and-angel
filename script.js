@@ -82,6 +82,11 @@ document.getElementById('hidden_iframe').addEventListener('load', function () {
   }
 });
 
+function disableButton() {
+  document.getElementById('submit-btn').disabled = true;
+  submitted=true;
+}
+
 fetch('https://opensheet.elk.sh/1PTq4FavIvAOxEmzK-d-oSrFaQM_1jgC97L5sKYWCeMQ/Form%20Responses%201')
     .then(res => res.json())
     .then(data => {
